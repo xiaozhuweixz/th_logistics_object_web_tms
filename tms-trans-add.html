@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input</title>
+    <!-- 1 bootstrap基础css -->
+    <link href="./libs/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+    <!-- 2 table表格css -->
+    <link href="./libs/bootstrap-3.3.7-dist/css/bootstrap-table.min.css" rel="stylesheet">
+    <!-- 3 treeview树css -->
+    <link href="./libs/bootstrap-3.3.7-dist/css/bootstrap-treeview.min.css" rel="stylesheet">
+    <!-- 4 datetimepicker时间选择css -->
+    <link href="./libs/bootstrap-3.3.7-dist/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <!-- 5 select选择框css -->
+    <link href="./libs/bootstrap-3.3.7-dist/css/bootstrap-select.css" rel="stylesheet">
+    <!-- 6 fileinput上传文件css -->
+    <link href="./libs/bootstrap-3.3.7-dist/css/fileinput.min.css" rel="stylesheet">
+    <!-- 7 icheck单选+多选css -->
+    <link href="./libs/bootstrap-3.3.7-dist/css/icheck-blue.css" rel="stylesheet">
+    <!-- 8 Validator验证css -->
+    <link href="./libs/bootstrap-3.3.7-dist/css/bootstrapValidator.min.css" rel="stylesheet">
+    <!-- 9 layer弹框css -->
+    <link href="./libs/layer/layer-new.css" rel="stylesheet">
+    <!-- 10 引入字体css -->
+    <link href="./libs/bootstrap-3.3.7-dist/fonts/iconfont.css" rel="stylesheet">
+    <!-- 11 页面样式css -->
+    <link href="./src/css/pt-main.css" rel="stylesheet">
+
+    <!-- 优先引入jquery1.12.4版本 -->
+    <script src="./libs/jquery/jquery-1.12.4.js"></script>
+    <!-- 1 bootstrap基础js -->
+    <script src="./libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <!-- 2 table表格js -->
+    <script src="./libs/bootstrap-3.3.7-dist/js/bootstrap-table.min.js"></script>
+    <!-- 2 table列表数据js 可删除？ -->
+    <script src="./libs/bootstrap-3.3.7-dist/js/bootstrap-table-data.js"></script>
+    <!-- 3 treeview树js -->
+    <script src="./libs/bootstrap-3.3.7-dist/js/bootstrap-treeview.js"></script>
+    <!-- 4 datetimepicker时间选择js -->
+    <script src="./libs/bootstrap-3.3.7-dist/js/bootstrap-datetimepicker.js"></script>
+    <!-- 5 select选择框js -->
+    <script src="./libs/bootstrap-3.3.7-dist/js/bootstrap-select.min.js"></script>
+    <!-- 6 fileinput上传文件js -->
+    <script src="./libs/bootstrap-3.3.7-dist/js/fileinput.min.js"></script>
+    <!-- 6 fileinput中文包js -->
+    <script src="./libs/bootstrap-3.3.7-dist/js/fileinput_locale_zh.js"></script>
+    <!-- 7 icheck单选+多选js -->
+    <script src="./libs/bootstrap-3.3.7-dist/js/icheck.min.js"></script>
+    <!-- 8 Validator验证js -->
+    <script src="./libs/bootstrap-3.3.7-dist/js/bootstrapValidator.min.js"></script>
+    <!-- 9 layer弹框js -->
+    <script src="./libs/layer/layer.js"></script>
+    <!-- 11 页面js -->
+    <script src="./src/js/main.js"></script>
+
+</head>
+<body>
+<br>
+<br>
+<br>
+<div class="container-fluid">
+    <div class="row clearfix">
+        <div class="pt-bread">
+            <h3>运单信息</h3>
+        </div>
+        <div style="height:20px"></div>
+        <!--第一行-->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 column">
+            <form class="form-inline">
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6"
+                               for="TRANS_CUST_NO">委托单号：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="TRANS_CUST_NO">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="TRANS_WAYBILL_NO">运单号：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="TRANS_WAYBILL_NO">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group ">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6"
+                               for="CUST_NAME">委托客户：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="CUST_NAME"
+                                   placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6"
+                               for="TRANS_MEMO">备注：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="TRANS_MEMO"
+                                   placeholder="">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--第二行-->
+        <div class="col-md-12 column">
+
+            <form class="form-inline">
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="DRIVER_CHECK">审核状态：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <select id="DRIVER_CHECK" class="selectpicker form-control"
+                                    data-live-search="false"
+                                    title="请选择">
+                                <option>已审核</option>
+                                <option>未审核</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="TRANS_STATE">运单状态：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <select id="TRANS_STATE" class="selectpicker form-control"
+                                    data-live-search="false"
+                                    title="请选择">
+                                <option>计划（未调度）</option>
+                                <option>已调度</option>
+                                <option>在途</option>
+                                <option>到货</option>
+                                <option>签收</option>
+                                <option>已回单</option>
+                                <option>异常</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="TRANS_WAY">运输方式：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <select id="TRANS_WAY" class="selectpicker form-control"
+                                    data-live-search="false"
+                                    title="请选择">
+                                <option>陆运</option>
+                                <option>水运</option>
+                                <option>空运</option>
+                                <option>多式联运</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6"
+                               for="CARRIER_NAME">承运商选择：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="CARRIER_NAME">
+                        </div>
+                    </div>
+                </div>
+                <!--
+                                                    <div class="form-group col-md-3">
+                                                        <label class="control-label">更多筛选：</label>
+                                                        <button class="btn" type="button" data-toggle="collapse"
+                                                                data-target="#collapseExample" aria-expanded="false"
+                                                                aria-controls="collapseExample">显示 / 隐藏
+                                                        </button>
+                                                    </div>
+                -->
+            </form>
+        </div>
+        <div class="col-md-12 column">
+            <form class="form-inline">
+
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="TRANS_B_PRO">发货省份：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="TRANS_B_PRO">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="TRANS_B_CITY">发货城市：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="TRANS_B_CITY">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-2 col-md-4 col-sm-4 col-xs-6" for="TRANS_B_ADDR">详细地址：</label>
+                        <div class="col-lg-10 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="TRANS_B_ADDR">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="TRANS_B_ZIP">邮政编码：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="TRANS_B_ZIP">
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="col-md-12 column">
+            <form class="form-inline">
+
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="TRANS_E_PRO">到货省份：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="TRANS_E_PRO">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="TRANS_E_CITY">到货城市：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="TRANS_E_CITY">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-2 col-md-4 col-sm-4 col-xs-6" for="TRANS_E_ADDR">详细地址：</label>
+                        <div class="col-lg-10 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="TRANS_E_ADDR">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="TRANS_E_ZIP">邮政编码：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="TRANS_E_ZIP">
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="col-md-12 column">
+            <form class="form-inline">
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="TRANS_ARRTIME_EXP">要求提货时间：</label>
+                        <div class="date datetimepicker col-lg-8 col-md-8 col-sm-8 col-xs-6" id="TRANS_ARRTIME_EXP"
+                             data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                            <input class="span2 form-control" type="text"
+                                   value="">
+                            <span class="add-on" style="height: 40px"><i class="icon-th"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="TRANS_DEPART_EXP">要求发货时间：</label>
+                        <div class="date datetimepicker col-lg-8 col-md-8 col-sm-8 col-xs-6" id="TRANS_DEPART_EXP"
+                             data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                            <input class="span2 form-control" type="text"
+                                   value="">
+                            <span class="add-on" style="height: 40px"><i class="icon-th"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="TRANS_REACH_EXP">要求到货时间：</label>
+                        <div class="date datetimepicker col-lg-8 col-md-8 col-sm-8 col-xs-6" id="TRANS_REACH_EXP"
+                             data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                            <input class="span2 form-control" type="text"
+                                   value="">
+                            <span class="add-on" style="height: 40px"><i class="icon-th"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="col-md-12 column">
+            <form class="form-inline">
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="TRANS_ARRTIME">实际提货时间：</label>
+                        <div class="date datetimepicker col-lg-8 col-md-8 col-sm-8 col-xs-6" id="TRANS_ARRTIME"
+                             data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                            <input class="span2 form-control" type="text"
+                                   value="">
+                            <span class="add-on" style="height: 40px"><i class="icon-th"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="TRANS_DEPART">实际发货时间：</label>
+                        <div class="date datetimepicker col-lg-8 col-md-8 col-sm-8 col-xs-6" id="TRANS_DEPART"
+                             data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                            <input class="span2 form-control" type="text"
+                                   value="">
+                            <span class="add-on" style="height: 40px"><i class="icon-th"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="TRANS_REACH">实际到货时间：</label>
+                        <div class="date datetimepicker col-lg-8 col-md-8 col-sm-8 col-xs-6" id="TRANS_REACH"
+                             data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                            <input class="span2 form-control" type="text"
+                                   value="">
+                            <span class="add-on" style="height: 40px"><i class="icon-th"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="col-md-12 column">
+            <form class="form-inline">
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6"
+                               for="TRANS_COST_EXP">预计费用：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="TRANS_COST_EXP">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6"
+                               for="TRANS_DISTANCE">总里程：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="TRANS_DISTANCE">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6"
+                               for="TRANS_WEIGHT">总重量：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="TRANS_WEIGHT">
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row clearfix">
+        <div class="pt-bread">
+            <h3>货物信息</h3>
+        </div>
+        <div style="height:20px"></div>
+        <!--第一行-->
+        <div class="col-md-12 column pt-btn-line">
+            <button type="button" class="btn w120 btn-default btn-primary">新增</button>
+            <button type="button" class="btn w120 btn-default">删除</button>
+            <button type="button" class="btn w120 btn-default">修改</button>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="table-wrap">
+                    <table id="tb_departments"></table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 column" style="text-align:center">
+            <button type="button" class="btn w120 btn-default btn-primary">保存</button>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<script src="./src/js/tms-trans-add-table.js"></script>
+<script>
+    $('#TRANS_ARRTIME_EXP').datetimepicker({
+        language: 'zh',
+        format: 'yyyy-mm-dd',
+        todayBtn: true,
+        autoclose: true
+    });
+    // 时间选择
+    $('#TRANS_DEPART_EXP').datetimepicker({
+        language: 'zh',
+        format: 'yyyy-mm-dd',
+        todayBtn: true,
+        autoclose: true
+    });
+    // 时间选择
+    $('#TRANS_REACH_EXP').datetimepicker({
+        language: 'zh',
+        format: 'yyyy-mm-dd',
+        todayBtn: true,
+        autoclose: true
+    });
+    // 时间选择
+    $('#TRANS_ARRTIME').datetimepicker({
+        language: 'zh',
+        format: 'yyyy-mm-dd',
+        todayBtn: true,
+        autoclose: true
+    });
+    // 时间选择
+    $('#TRANS_DEPART').datetimepicker({
+        language: 'zh',
+        format: 'yyyy-mm-dd',
+        todayBtn: true,
+        autoclose: true
+    });
+    // 时间选择
+    $('#TRANS_REACH').datetimepicker({
+        language: 'zh',
+        format: 'yyyy-mm-dd',
+        todayBtn: true,
+        autoclose: true
+    });
+</script>
+
+</body>
+</html>
