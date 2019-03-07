@@ -61,7 +61,7 @@
 <div class="container-fluid">
     <div class="row clearfix">
         <div class="pt-bread">
-            <h3>运单信息</h3>
+            <h3>委托信息</h3>
         </div>
         <div style="height:20px"></div>
         <!--第一行-->
@@ -93,7 +93,7 @@
                                for="CUST_NAME">委托客户：</label>
                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
                             <input type="text" class="form-control" id="CUST_NAME"
-                                   placeholder="" >
+                                   placeholder="">
                         </div>
                     </div>
                 </div>
@@ -117,13 +117,13 @@
 
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <div class="form-group">
-                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="DRIVER_CHECK">审核状态：</label>
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="DRIVER_CHECK">结算方式：</label>
                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
                             <select id="DRIVER_CHECK" class="selectpicker form-control"
                                     data-live-search="false"
                                     title="请选择">
-                                <option>已审核</option>
-                                <option>未审核</option>
+                                <option>月结</option>
+                                <option>单结</option>
                             </select>
                         </div>
                     </div>
@@ -131,18 +131,14 @@
 
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <div class="form-group">
-                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="TRANS_STATE">运单状态：</label>
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="TRANS_STATE">计费方式：</label>
                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
                             <select id="TRANS_STATE" class="selectpicker form-control"
                                     data-live-search="false"
                                     title="请选择">
-                                <option>计划（未调度）</option>
-                                <option>已调度</option>
-                                <option>在途</option>
-                                <option>到货</option>
-                                <option>签收</option>
-                                <option>已回单</option>
-                                <option>异常</option>
+                                <option>按里程</option>
+                                <option>按重量</option>
+                                <option>里程+重量</option>
                             </select>
                         </div>
                     </div>
@@ -348,15 +344,63 @@
 
             </form>
         </div>
-        <div class="col-md-12 column">
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row clearfix">
+        <div class="pt-bread">
+            <h3>调度信息</h3>
+        </div>
+        <div style="height:20px"></div>
+        <!--第一行-->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 column">
             <form class="form-inline">
 
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <div class="form-group">
                         <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6"
-                               for="TRANS_COST_EXP">预计费用：</label>
+                               for="TRANS_CUST_NO">车辆选择：</label>
                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
-                            <input type="text" class="form-control" id="TRANS_COST_EXP">
+                            <input type="text" class="form-control" id="TRANS_CUST_NO">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6" for="TRANS_WAYBILL_NO">驾驶员选择：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="TRANS_WAYBILL_NO">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group ">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6"
+                               for="CUST_NAME">线路选择：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="CUST_NAME"
+                                   placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+        <!--第二行-->
+        <div class="col-md-12 column">
+
+            <form class="form-inline">
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6"
+                               for="TRANS_MEMO">车辆类型：</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="TRANS_MEMO"
+                                   placeholder="">
                         </div>
                     </div>
                 </div>
@@ -364,9 +408,10 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <div class="form-group">
                         <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6"
-                               for="TRANS_DISTANCE">总里程：</label>
+                               for="TRANS_MEMO">驾驶员姓名：</label>
                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
-                            <input type="text" class="form-control" id="TRANS_DISTANCE">
+                            <input type="text" class="form-control" id="TRANS_MEMO"
+                                   placeholder="">
                         </div>
                     </div>
                 </div>
@@ -374,13 +419,72 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <div class="form-group">
                         <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6"
-                               for="TRANS_WEIGHT">总重量：</label>
+                               for="CARRIER_NAME">起始城市:</label>
                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
-                            <input type="text" class="form-control" id="TRANS_WEIGHT">
+                            <input type="text" class="form-control" id="CARRIER_NAME">
+                        </div>
+                    </div>
+                </div>
+                <!--
+                                                    <div class="form-group col-md-3">
+                                                        <label class="control-label">更多筛选：</label>
+                                                        <button class="btn" type="button" data-toggle="collapse"
+                                                                data-target="#collapseExample" aria-expanded="false"
+                                                                aria-controls="collapseExample">显示 / 隐藏
+                                                        </button>
+                                                    </div>
+                -->
+            </form>
+        </div>
+        <div class="col-md-12 column">
+
+            <form class="form-inline">
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6"
+                               for="TRANS_MEMO">车牌号:</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="TRANS_MEMO"
+                                   placeholder="">
                         </div>
                     </div>
                 </div>
 
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6"
+                               for="TRANS_MEMO">联系方式:</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="TRANS_MEMO"
+                                   placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6"
+                               for="CARRIER_NAME">中转城市:</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="CARRIER_NAME">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-12 column">
+            <form class="form-inline">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6"
+                               for="TRANS_MEMO">挂车车牌号:</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                            <input type="text" class="form-control" id="TRANS_MEMO"
+                                   placeholder="">
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
@@ -390,7 +494,7 @@
         <div class="pt-bread">
             <h3>货物信息</h3>
         </div>
-        <div style="height:20px"></div>
+
         <!--第一行-->
         <div class="col-md-12 column pt-btn-line">
             <button type="button" class="btn w120 btn-default btn-primary">新增</button>
@@ -404,8 +508,10 @@
                 </div>
             </div>
         </div>
+        <div style="height:20px"></div>
         <div class="col-md-12 column" style="text-align:center">
-            <button type="button" class="btn w120 btn-default btn-primary">保存</button>
+            <button type="button" class="btn w120 btn-default btn-primary">确定</button>
+            <button type="button" class="btn w120 btn-default ">取消</button>
         </div>
     </div>
 </div>
