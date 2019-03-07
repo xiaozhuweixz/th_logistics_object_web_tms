@@ -31,7 +31,7 @@ var TableInit = function () {
     //初始化Table
     oTableInit.Init = function () {
         $('#tb_departments').bootstrapTable({
-            url: 'localhost:7777/tms/find_all_basic_cust',         //请求后台的URL（*）
+            url: 'http://mazhaoyang.cn/index.php/home/output/GangkouTable',         //请求后台的URL（*）
             method: 'get',                      //请求方式（*）
             striped: false,                      //是否显示行间隔色
             cache: false,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
@@ -39,7 +39,7 @@ var TableInit = function () {
             sortable: false,                     //是否启用排序
             sortOrder: "asc",                   //排序方式
             queryParams: oTableInit.queryParams,//传递参数（*）
-            sidePagination: "client",           //分页方式：client客户端分页，server服务端分页（*）
+            sidePagination: "server",           //分页方式：client客户端分页，server服务端分页（*）
             pageNumber: 1,                       //初始化加载第一页，默认第一页
             pageSize: 10,                       //每页的记录行数（*）
             pageList: [10, 25, 50, 100],        //可供选择的每页的行数（*）
@@ -48,98 +48,54 @@ var TableInit = function () {
             showRefresh: false,                  //是否显示刷新按钮
             minimumCountColumns: 2,             //最少允许的列数
             clickToSelect: false,                //是否启用点击选中行
-            uniqueId: "custId",                     //每一行的唯一标识，一般为主键列
+            uniqueId: "ID",                     //每一行的唯一标识，一般为主键列
             showToggle: false,                    //是否显示详细视图和列表视图的切换按钮
             cardView: false,                    //是否显示详细视图
             detailView: false,                   //是否显示父子表
             showColumns: false,
-            columns:
+            columns: [
+                [
+                    // 设置一行
+
+                ],
+                [],
+
                 [
                     {
                         checkbox: true
                     }, {
-                        field: 'custId',
-                        title: '序号'
+                    field: 'index',
+                    title: '序号'
                 }, {
-                    field: 'custShortname',
-                    title: '客户名称'
+                    field: 'name',
+                    title: '车型'
                 }, {
-                    field: 'custName',
-                    title: '联系人',
+                    field: 'pricingForm',
+                    title: '车牌号',
                 }, {
-                    field: 'custPhone',
-                    title: '联系方式'
+                    field: 'ClassificationOfFees',
+                    title: '额定载重(t)'
                 }, {
-                    field: 'custFax',
-                    title: '公司地址'
+                    field: 'typeOfTrade',
+                    title: '净空(m³)'
                 }, {
-                    field: 'custAddress',
-                    title: '开户银行'
+                    field: 'chargeSubject',
+                    title: '车辆状态'
                 }, {
-                    field: 'custZip',
-                    title: '银行账号',
+                    field: 'state',
+                    title: '主驾驶员',
                 }, {
-                    field: 'orgId',
-                    title: '备注',
-                },{
-                    field: 'countType',
-                    title: '备注',
-                },{
-                    field: 'custMemo',
-                    title: '备注',
-                },{
-                    field: 'custAddMan',
-                    title: '备注',
-                },{
-                    field: 'custAddTime',
-                    title: '备注',
-                },{
-                    field: 'custState',
-                    title: '备注',
-                },{
-                    field: 'custPre',
-                    title: '备注',
-                },{
-                    field: 'custIsPosition',
-                    title: '备注',
-                },{
-                    field: 'custIsNotice',
-                    title: '备注',
-                },{
-                    field: 'custTarget',
-                    title: '备注',
-                },{
-                    field: 'uTime',
-                    title: '备注',
-                },{
-                    field: 'custSign',
-                    title: '备注',
-                },{
-                    field: 'custPassword',
-                    title: '备注',
-                },{
-                    field: 'uDelete',
-                    title: '备注',
-                },{
-                    field: 'custLoginName',
-                    title: '备注',
-                },{
-                    field: 'comId',
-                    title: '备注',
-                },{
-                    field: 'deptId',
-                    title: '备注',
-                },{
-                    field: 'custCode',
-                    title: '备注',
-                },{
-                    field: 'goodsClass',
-                    title: '备注',
+                    field: 'methods',
+                    title: '车况',
                 }, {
-                        field: 'custAvator',
-                        title: '备注',
-                    },
-                ],
+                    field: 'methods',
+                    title: '报废日期',
+                }, {
+                    field: 'methods',
+                    title: '备注',
+                },
+                ]
+            ],
             onLoadSuccess: function (data) {
                 var data = $('#tb_departments').bootstrapTable('getData', true);
                 //合并单元格
