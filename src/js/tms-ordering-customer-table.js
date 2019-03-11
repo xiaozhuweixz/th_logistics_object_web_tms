@@ -25,14 +25,13 @@ function operateState(value, row, index) {
     return value
 }
 
-
 var TableInit = function () {
     var oTableInit = new Object();
     //初始化Table
     oTableInit.Init = function () {
         $('#tb_departments').bootstrapTable({
             url: 'http://127.0.0.1:7777/tms/find_all_basic_cust',         //请求后台的URL（*）
-            method: 'post',                      //请求方式（*）
+            method: 'get',                      //请求方式（*）
             striped: false,                      //是否显示行间隔色
             cache: false,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
             pagination: true,                   //是否显示分页（*）

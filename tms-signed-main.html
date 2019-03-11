@@ -86,59 +86,54 @@
             <!--头部点击条-->
             <div class="pt-bar" id="pt-bar"><img src="./src/images/Group15.png" alt=""></div>
             <!--菜单列表-->
-            <!--
             <div class="pt-menu">
                 <ul>
-
-                    <li class="pt-menu-list pt-menu-selected">
+                    <li class="pt-menu-list" onclick="window.location.href='tms-trans-main.html'">
                         <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
-                        <h3 class="pt-menu-title"><a href="#">当前选中</a></h3>
+                        <h3 class="pt-menu-title"><a href="tms-trans-main.html">运单管理</a></h3>
                     </li>
 
-                    <li class="pt-menu-list">
+                    <li class="pt-menu-list" onclick="window.location.href='tms-dispatch-main.html'">
                         <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
-                        <h3 class="pt-menu-title"><a href="#">当前未选中</a></h3>
+                        <h3 class="pt-menu-title"><a href="tms-dispatch-main.html">调度管理</a></h3>
+                    </li>
+
+                    <li class="pt-menu-list" onclick="window.location.href='tms-signed-main.html'">
+                        <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                        <h3 class="pt-menu-title"><a href="tms-signed-main.html">签收管理</a></h3>
                     </li>
 
                     <li class="pt-menu-list pt-menu-open">
 
                         <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
-                        <h3 class="pt-menu-title"><a href="javascript:;">一级菜单演示</a></h3>
+                        <h3 class="pt-menu-title">基础信息管理</h3>
 
                         <ul class="pt-second-menu">
 
-                            <li class="pt-menu-child">
+                            <li class="pt-menu-child" onclick="window.location.href='tms-cars-management.html'">
                                 <span class="glyphicon  glyphicon-th-large" aria-hidden="true"></span>
-                                <h3 class="pt-menu-title"><a href="#">二级菜单演示</a></h3>
+                                <h3 class="pt-menu-title"><a href="tms-carrier-management.html">车辆管理</a></h3>
                             </li>
 
-                            <li class="pt-menu-child pt-menu-selected">
+                            <li class="pt-menu-child" onclick="window.location.href='tms-driver-management.html'">
                                 <span class="glyphicon  glyphicon-th-large" aria-hidden="true"></span>
-                                <h3 class="pt-menu-title"><a href="#">二级菜单演示</a></h3>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="pt-menu-list">
-
-                        <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
-                        <h3 class="pt-menu-title"><a href="javascript:;">一级菜单演示</a></h3>
-
-                        <ul class="pt-second-menu">
-
-                            <li class="pt-menu-child">
-                                <span class="glyphicon  glyphicon-th-large" aria-hidden="true"></span>
-                                <h3 class="pt-menu-title"><a href="#">二级菜单演示</a></h3>
+                                <h3 class="pt-menu-title"><a href="tms-driver-management.html">驾驶员管理</a></h3>
                             </li>
 
-                            <li class="pt-menu-child">
+                            <li class="pt-menu-child" onclick="window.location.href='tms-carrier-management.html'">
                                 <span class="glyphicon  glyphicon-th-large" aria-hidden="true"></span>
-                                <h3 class="pt-menu-title"><a href="#">二级菜单演示</a></h3>
+                                <h3 class="pt-menu-title"><a href="tms-carrier-management.html">承运商管理</a></h3>
                             </li>
+
+                            <li class="pt-menu-child" onclick="window.location.href='tms-ordering-customer-management.html'">
+                                <span class="glyphicon  glyphicon-th-large" aria-hidden="true"></span>
+                                <h3 class="pt-menu-title"><a href="tms-ordering-customer-management.html">委托客户管理</a></h3>
+                            </li>
+
                         </ul>
                     </li>
                 </ul>
-            </div>-->
+            </div>
         </div>
         <!--左侧菜单 结束-->
 
@@ -146,7 +141,7 @@
         <div class="pt-view pt-open">
             <!--带横线标题-->
             <div class="pt-bread">
-                <h3>调度主页面</h3>
+                <h3>签收主页面</h3>
                 <!-- 添加展开按钮 -->
                 <button class="btn btn-primary pt-zkbtn" type="button" data-toggle="collapse"
                         data-target="#collapseExample" aria-expanded="false"
